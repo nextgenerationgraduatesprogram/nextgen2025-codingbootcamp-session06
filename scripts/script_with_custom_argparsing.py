@@ -17,5 +17,9 @@ if __name__ == "__main__":
     assert "y" in parsed_args, f"must provide y"
 
     # do something
+    x = int(parsed_args["x"])
+    y = int(parsed_args["y"])
     z = x + y
     print(f"{float(x)} + {float(y)} = {z}")
+
+    

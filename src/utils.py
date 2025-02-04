@@ -1,6 +1,7 @@
 import cv2
 import gzip
 import urllib
+from urllib import request
 import numpy as np
 from pathlib import Path
 
@@ -24,7 +25,7 @@ def download_fashion_mnist(output_path: str, num_samples : Optional[int] = 10) -
         src = base_url + filename # source url
         dst = output_path.joinpath(filename) # destination file
         if not dst.exists():
-            urllib.request.urlretrieve(src, dst)
+            request.urlretrieve(src, dst)
 
     # extract the images and save them
     imgs = output_path.joinpath(files["test_images"])

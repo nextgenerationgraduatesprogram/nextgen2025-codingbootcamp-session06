@@ -4,6 +4,8 @@ from pathlib import Path
 from typing import *
 from numpy import ndarray
 
+print(__name__)
+
 
 class FashionMnist:
     def __init__(self, root: str, regex: Optional[str] = None) -> None:
@@ -39,3 +41,8 @@ class FashionMnist:
         with open(path, "r") as file:
             data : int = int(file.read())
         return data
+    
+if __name__ == "__main__":
+    # do some stuffr only if im being executed
+    pass
+

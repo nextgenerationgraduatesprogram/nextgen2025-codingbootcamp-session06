@@ -1,6 +1,8 @@
 import sys
 from pathlib import Path
 
+print(__name__)
+
 
 if __name__ == "__main__":
     # make sure we can use src
@@ -22,3 +24,6 @@ if __name__ == "__main__":
     # do something to the dataset... e.g. train a model, analyze the data, pre-process the data, etc.
     for idx, (img, lbl) in enumerate(dataset):
         print(f"{idx} has label {lbl} with img of shape {img.shape}")
+
+        
+  
